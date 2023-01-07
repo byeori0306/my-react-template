@@ -1,5 +1,5 @@
 import image from "./street_cat.jpg";
-import cat from "./cat.svg";
+import Cat from "./cat.svg";
 import { useState } from "react";
 
 export default function App() {
@@ -14,7 +14,7 @@ export default function App() {
                 My React template - {process.env.NODE_ENV} {process.env.name} /
                 counter: {counter}
             </h1>
-            <img src={cat} alt="sample" width="40" height="38" />
+            <Cat />
             <img src={image} alt="sample" width="1000" height="1000" />
         </main>
     );

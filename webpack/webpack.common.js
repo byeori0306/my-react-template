@@ -26,7 +26,12 @@ module.exports = {
                 type: "asset/resource",
             },
             {
-                test: /\.(woff(2)?|eot|ttf|otf|svg)$/,
+                test: /\.svg$/i,
+                issuer: /\.[jt]sx?$/,
+                use: ["@svgr/webpack"],
+            },
+            {
+                test: /\.(woff(2)?|eot|ttf|otf)$/,
                 type: "asset/inline",
             },
         ],
@@ -35,7 +40,6 @@ module.exports = {
         path: path.resolve(__dirname, "..", "./build"),
         filename: "bundle.js",
     },
-    mode: "development",
     plugins: [
         new HtmlWebpackPlugin({
             template: path.resolve(__dirname, "..", "./src/index.html"),
