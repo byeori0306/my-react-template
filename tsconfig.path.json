@@ -3,7 +3,11 @@
         "baseUrl": "./",
         "paths": {
             "@icon/*": ["asset/icon/*"],
-            "@image/*": ["asset/image/*"]
+            "@image/*": ["asset/image/*"],
+            "@component/*": ["lib/component/*"],
+            "@type/*": ["lib/type/*"],
+            "@util/*": ["lib/util/*"],
+            "@src/*": ["src/*"]
         }
     }
 }

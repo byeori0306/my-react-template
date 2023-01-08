@@ -2,18 +2,17 @@ import image from "@image/street_cat.jpg";
 import Cat from "@icon/cat.icon.svg";
 import { useState } from "react";
 import { css } from "@emotion/react";
+import Button from "@component/Button";
+import { addCatEmoji } from "@util/addCatEmoji";
 
 export default function App() {
     const [counter, setCounter] = useState(0);
 
     return (
         <main css={mainStyle}>
-            <button
-                css={buttonStyle}
-                onClick={() => setCounter((prev) => prev + 1)}
-            >
-                HMR test button
-            </button>
+            <Button onClick={() => setCounter((prev) => prev + 1)}>
+                {addCatEmoji("HMR test button")}
+            </Button>
             <div css={wrapperStyle}>
                 <h1 css={titleStyle}>
                     {`My React template - ${process.env.NODE_ENV}
@@ -31,15 +30,6 @@ const mainStyle = css`
     flex-direction: column;
     align-items: center;
     padding: 3.2rem 0;
-`;
-
-const buttonStyle = css`
-    border: 0.2rem solid #5e4324;
-    border-radius: 1.6rem;
-    font-size: 1.6rem;
-    font-weight: 700;
-    line-height: 1.6rem;
-    padding: 1rem;
 `;
 
 const wrapperStyle = css`
