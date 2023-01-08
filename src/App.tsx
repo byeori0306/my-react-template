@@ -1,5 +1,5 @@
-import image from "../asset/image/street_cat.jpg";
-import Cat from "../asset/icon/cat.icon.svg";
+import image from "@image/street_cat.jpg";
+import Cat from "@icon/cat.icon.svg";
 import { useState } from "react";
 import { css } from "@emotion/react";
 

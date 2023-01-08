@@ -22,6 +22,7 @@ module.exports = {
     ],
     rules: {
         "no-unused-vars": "off",
+        "import/no-unresolved": "off",
         "@typescript-eslint/no-var-requires": "off",
         "react/prop-types": "off",
         "react/jsx-uses-react": "off",
