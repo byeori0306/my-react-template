@@ -1,4 +1,3 @@
-import { hot } from "react-hot-loader/root";
 import image from "@image/street_cat.jpg";
 import Cat from "@icon/cat.icon.svg";
 import { useState } from "react";
@@ -6,7 +5,7 @@ import { css } from "@emotion/react";
 import Button from "@component/Button";
 import { addCatEmoji } from "@util/addCatEmoji";
 
-function App() {
+export default function App() {
     const [counter, setCounter] = useState(0);
 
     return (
@@ -25,8 +24,6 @@ function App() {
         </main>
     );
 }
-
-export default hot(App);
 
 const mainStyle = css`
     display: flex;
