@@ -25,12 +25,11 @@ module.exports = {
                 ],
             },
             {
-                test: /\.css$/,
-                use: ["style-loader", "css-loader"],
-            },
-            {
                 test: /\.(?:ico|gif|png|jpg|jpeg)$/i,
                 type: "asset/resource",
+                generator: {
+                    filename: "static/image/[name].[ext]?[hash]",
+                },
             },
             {
                 test: /\.svg$/i,
@@ -39,7 +38,10 @@ module.exports = {
             },
             {
                 test: /\.(woff(2)?|eot|ttf|otf)$/,
-                type: "asset/inline",
+                type: "asset",
+                generator: {
+                    filename: "static/font/[name].[ext]?[hash]",
+                },
             },
         ],
     },
