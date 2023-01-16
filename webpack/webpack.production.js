@@ -1,5 +1,6 @@
 const webpack = require("webpack");
 const banner = require("./banner.js");
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 module.exports = {
     mode: "production",
@@ -8,5 +9,6 @@ module.exports = {
             "process.env.name": JSON.stringify("byeori"),
         }),
         new webpack.BannerPlugin(banner),
+        new CleanWebpackPlugin(),
     ],
 };
